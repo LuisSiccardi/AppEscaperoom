@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room - Impacto</title>
+    <link rel="stylesheet" href="css/styleLanzamiento.css">
+</head>
+       
+<body>
+    <div class="pie">
+        <a href="index.html" class="reiniciar-btn">REINICIAR</a>
+    </div>
+
+    <script>
+        const audio = new Audio("../sonido/lanzamiento.mp3");
+        audio.volume = 1; // Valor entre 0 y 1, donde 1 es el volumen máximo
+
+        // Reproducir el sonido cuando la página se carga
+        document.addEventListener('DOMContentLoaded', function () {
+        audio.play();
+        });     
+    </script>
+</body>
+
+</html>
