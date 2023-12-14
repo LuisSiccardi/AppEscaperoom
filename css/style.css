@@ -1,0 +1,170 @@
+:root {
+	--escala: 20px;
+	--top-primera-fila: calc(var(--escala) * 2);
+	--top-segunda-fila: calc(var(--escala) * 6);
+	--left-horizontales: calc(var(--escala) * 0.8);
+	--left-primera-columna: calc(var(--escala) * -1);
+	--right-segunda-columna: 0px;
+}
+  
+* {
+	user-select: none;
+}
+  
+body {
+	background-image: url("../img/fondoPantalla.jpg");
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;
+  
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	margin: 60px;
+  
+	color: #ffffff;
+}
+  
+#container {
+	display: flex;
+	background-color: rgb(85, 38, 17);
+	padding: 3rem;
+	animation-name: glow;
+	animation-duration: 500ms;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	animation-timing-function: ease-in-out;
+	margin-top: 30px; /* Ajusta la distancia hacia abajo */
+	margin-right: 150px; /* Ajusta la distancia hacia la derecha */
+	position: relative; /* Permite usar valores relativos para las propiedades top y left */
+}
+  
+.numero {
+	position: relative;
+	height: calc(var(--escala) * 9);
+	width: calc(var(--escala) * 6.25);
+}
+  
+.on {
+	fill: red;
+	box-shadow: inset 0px 0px 15px 2px rgba(255, 0, 0, 0.);
+}
+  
+.segmento {
+	position: absolute;
+	height: var(--escala);
+	fill: rgba(243, 120, 120, 0.097);
+}
+
+  .segmento:nth-child(1){
+	left: var(--left-horizontales);
+}
+
+.segmento:nth-child(2){
+	transform: rotate(90deg);
+	right: var(--right-segunda-columna);
+	top: var(--top-primera-fila);
+}
+
+.segmento:nth-child(3){
+	transform: rotate(90deg);
+	right: var(--right-segunda-columna);
+	top: calc(var(--escala) * 6);
+}
+
+.segmento:nth-child(4){
+	left: var(--left-horizontales);
+	top: calc(var(--escala) * 8);
+}
+
+.segmento:nth-child(5){
+	transform: rotate(90deg);
+	top: var(--top-segunda-fila);
+	left: var(--left-primera-columna);
+}
+
+.segmento:nth-child(6){
+	left: var(--left-horizontales);
+	top: calc(var(--escala) * 4 );
+}
+
+.segmento:nth-child(7){
+	transform: rotate(90deg);
+	top: var(--top-primera-fila);
+	left: var(--left-primera-columna);
+}
+
+.doble_punto{
+	position: relative;
+	height: var(--escala);
+	width: var(--escala);
+}
+
+.punto{
+	position: absolute;
+	background-color: red;
+	transform: rotate(45deg);
+	height: var(--escala);
+	width: var(--escala);
+}
+
+.punto:first-child{
+	top: calc( var(--escala) * 2 );
+	left: calc( var(--escala) * -0.45);
+}
+
+.punto:last-child{
+	top: calc( var(--escala) * 6 );
+	left: calc( var(--escala) * -0.45);
+}
+
+@keyframes glow {
+	0%{
+		box-shadow: 0px 0px 15px 10px rgba(134, 0, 0, 0.65);
+	}
+	100%{
+		box-shadow: 0px 0px 15px 20px rgba(131, 2, 2, 0.65);
+	}
+}
+
+/**/
+ 
+  #word-container {
+    margin-top: 150px;
+   
+  }
+  
+  input {
+    margin: 5px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* Blanco */
+    border-radius: 5px;
+    background-color: white; 
+    color: #000000; /* Blanco */
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff0000; /* Verde agua */
+    color: #ffffff; /* Blanco */
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  #word-container img {
+    width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 50px;
+    margin: 5px;
+  }

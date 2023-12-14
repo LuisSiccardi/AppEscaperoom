@@ -1,0 +1,29 @@
+body {
+    background-image: url("../img/impacto.gif");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.pie {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+}
+
+.reiniciar-btn {
+    color: white;
+    text-decoration: none;
+    padding: 25px 50px; /* Ajusta el tamaño del botón */
+    font-size: 20px; /* Ajusta el tamaño del texto del botón */
+    background-color: #ff0000;
+    border-radius: 30px; /* Ajusta el radio para hacer esquinas redondeadas */
+    cursor: pointer;
+    display: inline-block;
+}
