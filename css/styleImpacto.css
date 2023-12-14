@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     background-image: url("../img/impacto.gif");
     background-size: cover;
@@ -20,10 +21,18 @@ body {
 .reiniciar-btn {
     color: white;
     text-decoration: none;
-    padding: 25px 50px; /* Ajusta el tamaño del botón */
-    font-size: 20px; /* Ajusta el tamaño del texto del botón */
+    padding: 15px 30px; /* Ajusta el tamaño del botón para pantallas más pequeñas */
+    font-size: 16px; /* Ajusta el tamaño del texto del botón para pantallas más pequeñas */
     background-color: #ff0000;
-    border-radius: 30px; /* Ajusta el radio para hacer esquinas redondeadas */
+    border-radius: 20px; /* Ajusta el radio para hacer esquinas redondeadas */
     cursor: pointer;
     display: inline-block;
+}
+
+/* Estilos específicos para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .reiniciar-btn {
+        padding: 10px 20px; /* Ajusta el tamaño del botón para pantallas más pequeñas */
+        font-size: 14px; /* Ajusta el tamaño del texto del botón para pantallas más pequeñas */
+    }
 }

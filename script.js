@@ -21,7 +21,7 @@ function setNumero(i, valor) {
 
 // Temporizador de cuenta regresiva de 45 minutos
 const timerElement = document.getElementById('timer');
-let countdown = 30; // 45 minutos en segundos
+let countdown = 10; // 45 minutos en segundos
 
 function updateTimer() {
   const minutes = Math.floor(countdown / 60);
