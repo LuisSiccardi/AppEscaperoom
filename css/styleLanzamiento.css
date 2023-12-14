@@ -1,6 +1,8 @@
 body {
     background-image: url("../img/lanzamiento2.gif");
     background-size: cover;
+    animation: none; /* Desactivar la animación */
+    animation-iteration-count: 1; /* Reproducir solo una vez */
     margin: 0;
     padding: 0;
 }
